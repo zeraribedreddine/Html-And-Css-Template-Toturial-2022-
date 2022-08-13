@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exmple 02 - Responsive NavBar </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700;900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Zerari</a>
+        <div class="nav-link">
+            <ul>
+                <li><a href="#" class= "active" >home</a></li>
+                <li><a href="#">content</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+        <img src="img/menu-btn.png" alt="menu_icon"
+         class="menu_btn">
+    </nav>
+    <header></header>
+    <!-- Start javaScript code de Menu_Button -->
+   <script>
+        const menu_btn = document.querySelector(".menu_btn")
+        const navLink = document.querySelector(".nav-link")
+
+        menu_btn.addEventListener('click',()=>{
+        navLink.classList.toggle('mobile-menu')
+        })
+
+   </script>
+
+   <!-- End javaScript code de Menu_Button -->
+</body>
+</html>

@@ -1,0 +1,111 @@
+/* start style de root  */
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    width: 100vw;  /* حجم العرض على حجم الشاشة  */
+    height: 100vh; /* حجم الطول على حجم  طول الشاشة  */
+    background-image: url(../img/landscape.jpg);
+}
+
+/* start Navbar Desktop */
+
+.navbar {
+    position: absolute;
+    padding: 50px ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white ;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+.navbar .nav-link ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .nav-link ul a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 30px;
+}
+
+.navbar .nav-link ul a.active {
+  text-transform: uppercase;
+  font-weight: 600px;
+  color: rgb(223, 21, 21);  
+}
+.navbar .menu_btn {
+    display: none;
+    position: absolute;
+    width: 35px;
+    top: 50px;
+    right: 50px;
+}
+
+/* End Navbar Desktop */
+
+ /* start mobile-menu - class JavaScript */
+
+.navbar .mobile-menu {
+    margin-left: 0px;
+}
+
+ /* end mobile-menu - class JavaScript */
+
+/* start Navbar Mobile */
+
+@media screen and (max-width: 720px){
+    .navbar{
+       padding: 0px;
+    }
+    .navbar .logo {
+       display: none;
+    }
+        
+    .navbar .menu_btn{ 
+        display: block;
+    }
+    .nav-link {
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        background-color: rgb(255 255 255 / 10%);
+        backdrop-filter: blur(6px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: 0.5s all ease;
+    }
+    .nav-link ul {
+        display: flex;
+        flex-direction: column  ;
+        justify-content: center;
+        align-items :center;
+    }
+    .nav-link ul li{
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 20px 0px;
+    }
+
+}
+
+/* End Navbar Mobile */
